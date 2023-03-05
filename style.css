@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p{
+    font-size:calc(13px + (21 - 13) * ((100vw - 320px) / (1600 - 320)))
+
+}
+
+.heading {
+    width: 90%;
+    margin: 3% auto;
+}
+
+.container {
+    width: 90%;
+    margin: 4% auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 60px;
+}
+
+.box {
+    position: relative;
+    height: 200px;
+    background-color: #8cbef4;
+    border-radius: 3%;
+}
+
+.card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #f0f4ff;
+    z-index: 1;
+    border-radius: 0 0 5% 5%;
+    box-shadow: 0px 1px 9px 1px #c5c5c59c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+img {
+    position: relative;
+    margin: 5% auto;
+    width: 200px;
+}
+
+.paragraph {
+    width: 90%;
+    margin: auto;
+}
+/* MOBILE */
+@media screen and (min-width:300px) and (max-width:500px) {
+    .heading {
+        text-align: center;
+        margin: 7% auto;
+    }
+    img{
+        margin: -3% auto;
+    }
+    .card{
+        height: 25px;
+    }
+    .container {
+        width: 50%;
+        grid-auto-rows: 145px;
+    }
+
+    .box {
+        height: 145px;
+    }
+
+}
+/* TABLET */
+@media screen and (min-width:501px) and (max-width:768px) {
+    .card{
+        height: 35px;
+    }
+    .box {
+        height: 140px;
+        width: 140px;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(113px, 1.5fr));
+        grid-auto-rows: 150px;
+    }
+    img{
+        margin: -2% auto;
+    }
+}
+
+ @media screen and (min-width:769px) and (max-width:1024px){
+.container{
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+
+}
+.box{
+    height: 150px;
+    width: 150px;
+}
+
+img{
+    margin: -1% auto;
+}
+
+ } 
+ @media screen and (min-width:1024px) and (max-width:1200px){
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));    
+    }
+    .box{
+        height: 165px;
+        width: 165px;
+    }
+    
+ }
+ @media screen and (min-width:1200px) and (max-width:1300px){
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));    
+    }
+    .box{
+        height: 165px;
+        width: 165px;
+    }
+    
+ }
